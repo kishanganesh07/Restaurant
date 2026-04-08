@@ -16,25 +16,25 @@ const menuOptions = [
 const customStyles = {
   control: (provided, state) => ({
     ...provided,
-    backgroundColor: 'rgba(0,0,0,0.2)',
-    borderColor: state.isFocused ? '#3b82f6' : 'rgba(255, 255, 255, 0.08)',
-    boxShadow: state.isFocused ? '0 0 0 2px rgba(59, 130, 246, 0.2)' : 'none',
+    backgroundColor: '#ffffff',
+    borderColor: state.isFocused ? '#2563eb' : '#d1d5db',
+    boxShadow: state.isFocused ? '0 0 0 2px rgba(37, 99, 235, 0.2)' : 'none',
     padding: '0.1rem',
-    borderRadius: '6px',
-    color: '#fafafa',
+    borderRadius: '4px',
+    color: '#111827',
     cursor: 'pointer',
     width: '100%',
     minWidth: '220px',
     '&:hover': {
-      borderColor: state.isFocused ? '#3b82f6' : 'rgba(255, 255, 255, 0.15)'
+      borderColor: state.isFocused ? '#2563eb' : '#9ca3af'
     }
   }),
   menu: (provided) => ({
     ...provided,
-    backgroundColor: '#18181b',
-    border: '1px solid rgba(255, 255, 255, 0.08)',
-    boxShadow: '0 8px 24px -8px rgba(0,0,0,0.3)',
-    borderRadius: '8px',
+    backgroundColor: '#ffffff',
+    border: '1px solid #e5e7eb',
+    boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+    borderRadius: '4px',
     zIndex: 9999
   }),
   menuList: (provided) => ({
@@ -47,28 +47,28 @@ const customStyles = {
   }),
   option: (provided, state) => ({
     ...provided,
-    backgroundColor: state.isFocused ? 'rgba(255,255,255,0.05)' : 'transparent',
-    color: state.isSelected ? '#3b82f6' : '#fafafa',
+    backgroundColor: state.isFocused ? '#f3f4f6' : 'transparent',
+    color: state.isSelected ? '#2563eb' : '#111827',
     cursor: 'pointer',
     padding: '0.75rem 1rem',
     fontSize: '0.85rem',
     '&:active': {
-      backgroundColor: 'rgba(59, 130, 246, 0.1)'
+      backgroundColor: '#e5e7eb'
     }
   }),
   singleValue: (provided) => ({
     ...provided,
-    color: '#fafafa',
+    color: '#111827',
     fontSize: '0.85rem',
   }),
   placeholder: (provided) => ({
     ...provided,
-    color: '#a1a1aa',
+    color: '#9ca3af',
     fontSize: '0.85rem',
   }),
   input: (provided) => ({
     ...provided,
-    color: '#fafafa'
+    color: '#111827'
   })
 };
 

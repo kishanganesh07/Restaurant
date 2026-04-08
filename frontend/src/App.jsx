@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import OrderForm from './components/OrderForm';
 import OrderCard from './components/OrderCard';
-
+import { ChefHat } from 'lucide-react';
 
 function App() {
   const [orders, setOrders] = useState([]);
@@ -29,7 +29,7 @@ function App() {
     <div className="dashboard-layout">
       <nav className="top-nav">
         <div className="brand">
-          <img src="/logo.png" alt="Restaurant Tracker Logo" className="app-logo" />
+          <ChefHat size={24} color="#2563eb" />
           <h1>Order Tracker</h1>
         </div>
         
@@ -57,9 +57,12 @@ function App() {
             Preparing <span className="badge">{preparingOrders.length}</span>
           </div>
           <div className="col-content">
-            {preparingOrders.map(order => (
-              <OrderCard key={order.id} order={order} onStatusUpdate={fetchOrders} isAdmin={viewMode === 'admin'} />
-            ))}
+            {preparingOrders.length === 0 
+              ? <p className="empty-state">No orders found</p>
+              : preparingOrders.map(order => (
+                  <OrderCard key={order.id} order={order} onStatusUpdate={fetchOrders} isAdmin={viewMode === 'admin'} />
+                ))
+            }
           </div>
         </div>
 
@@ -68,9 +71,12 @@ function App() {
             Ready <span className="badge">{readyOrders.length}</span>
           </div>
           <div className="col-content">
-            {readyOrders.map(order => (
-              <OrderCard key={order.id} order={order} onStatusUpdate={fetchOrders} isAdmin={viewMode === 'admin'} />
-            ))}
+            {readyOrders.length === 0
+              ? <p className="empty-state">No orders found</p>
+              : readyOrders.map(order => (
+                  <OrderCard key={order.id} order={order} onStatusUpdate={fetchOrders} isAdmin={viewMode === 'admin'} />
+                ))
+            }
           </div>
         </div>
 
@@ -79,9 +85,12 @@ function App() {
             Completed <span className="badge">{completedOrders.length}</span>
           </div>
           <div className="col-content">
-            {completedOrders.map(order => (
-              <OrderCard key={order.id} order={order} onStatusUpdate={fetchOrders} isAdmin={viewMode === 'admin'} />
-            ))}
+            {completedOrders.length === 0
+              ? <p className="empty-state">No orders found</p>
+              : completedOrders.map(order => (
+                  <OrderCard key={order.id} order={order} onStatusUpdate={fetchOrders} isAdmin={viewMode === 'admin'} />
+                ))
+            }
           </div>
         </div>
       </div>
