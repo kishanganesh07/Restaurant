@@ -51,6 +51,17 @@ body {
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--border-color);
+  position: relative;
+}
+
+.role-switcher {
+  display: flex;
+  background: #e5e7eb;
+  border-radius: 6px;
+  padding: 0.25rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .brand {
@@ -65,12 +76,7 @@ body {
   color: var(--text-primary);
 }
 
-.role-switcher {
-  display: flex;
-  background: #e5e7eb;
-  border-radius: 6px;
-  padding: 0.25rem;
-}
+
 
 .switcher-btn {
   background: transparent;
@@ -153,6 +159,23 @@ body {
   color: #9ca3af;
   font-size: 0.85rem;
   padding: 2rem 0;
+}
+
+/* Column bottom hint banner */
+.col-hint {
+  border-top: 1px solid #fde68a;
+  background: #fffbeb;
+  color: #92400e;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.6rem 1rem;
+  text-align: center;
+}
+
+.col-hint-ready {
+  border-top: 1px solid #bbf7d0;
+  background: #f0fdf4;
+  color: #166534;
 }
 
 /* Cards - Base Layout */

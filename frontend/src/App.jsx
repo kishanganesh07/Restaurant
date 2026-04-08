@@ -64,6 +64,11 @@ function App() {
                 ))
             }
           </div>
+          {preparingOrders.length > 0 && viewMode === 'user' && (
+            <div className="col-hint">
+              ⏳ Waiting for Kitchen Chef to approve
+            </div>
+          )}
         </div>
 
         <div className="board-col">
@@ -78,6 +83,11 @@ function App() {
                 ))
             }
           </div>
+          {readyOrders.length > 0 && viewMode === 'user' && (
+            <div className="col-hint col-hint-ready">
+              ✅ Dish is done — Chef is marking as Completed
+            </div>
+          )}
         </div>
 
         <div className="board-col">
