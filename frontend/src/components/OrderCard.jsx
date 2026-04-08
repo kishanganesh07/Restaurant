@@ -26,7 +26,7 @@ const OrderCard = ({ order, onStatusUpdate, isAdmin }) => {
 
   const handleUpdate = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/api/orders/${order.id}/status`, {
+      const response = await fetch(`https://restaurant-ny8f.onrender.com/api/orders/${order.id}/status`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

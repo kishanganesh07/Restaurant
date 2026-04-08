@@ -9,7 +9,7 @@ function App() {
 
   const fetchOrders = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/orders');
+      const response = await fetch('https://restaurant-ny8f.onrender.com/api/orders');
       const data = await response.json();
       setOrders(data.orders || []);
     } catch (error) {
